@@ -1,8 +1,9 @@
 import React from "react";
-import Nav from "../Nav";
+
+import Videos from "../Videos";
 
 const Home = () => {
-  return <Nav />;
+  return <Videos />;
 };
 
 export default Home;
