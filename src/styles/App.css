@@ -39,6 +39,9 @@ h4 {
   width: 100%;
   padding: 4rem 0;
 }
+.main .container {
+  margin: 2rem auto;
+}
 .button {
   background-color: var(--successGreen);
   color: var(--fontPrimary);
@@ -56,4 +59,8 @@ h4 {
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr 1fr;
+}
+.info {
+  margin-top: 1rem;
+  text-align: center;
 }

@@ -2,8 +2,8 @@ import React from "react";
 
 const CheckBox = ({ text, ...rest }) => {
   return (
-    <label>
-      <input type="checkbox" {...rest} />
+    <label {...rest}>
+      <input type="checkbox" />
       <span>{text}</span>
     </label>
   );
