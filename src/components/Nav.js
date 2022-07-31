@@ -3,6 +3,7 @@ import React from "react";
 import styles from "styles/header.module.css";
 import logo from "assets/images/logo-bg.png";
 import Account from "./Account";
+import { Link } from "react-router-dom";
 const Nav = () => {
   return (
     <header className={` ${styles.header}`}>
@@ -10,10 +11,12 @@ const Nav = () => {
         <nav className={styles.nav}>
           <ul>
             <li>
-              <a className={styles.brand}>
-                <img src={logo} alt="learn with sumit" />
-                <h3>Learn with sumit</h3>
-              </a>
+              <Link to="/">
+                <a className={styles.brand}>
+                  <img src={logo} alt="learn with sumit" />
+                  <h3>Learn with sumit</h3>
+                </a>
+              </Link>
             </li>
           </ul>
           <Account />
