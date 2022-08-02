@@ -25,13 +25,13 @@ export const AuthProvider = ({ children }) => {
     return unsubscribe;
   });
   // signUp function
-  const signUp = async () => {
+  const signUp = async (email, password, username) => {
     const auth = getAuth();
-    await createUserWithEmailAndPassword(auth, "email", "password");
+    await createUserWithEmailAndPassword(auth, email, password);
     // update profile
 
     await updateProfile(auth.currentUser, {
-      displayName: "username",
+      displayName: username,
     });
     const user = auth.currentUser;
     setCurrentUser({ ...user });
@@ -39,9 +39,9 @@ export const AuthProvider = ({ children }) => {
 
   // login function
 
-  const login = () => {
+  const login = (email, password) => {
     const auth = getAuth();
-    return signInWithEmailAndPassword(auth, "email", "password");
+    return signInWithEmailAndPassword(auth, email, password);
   };
 
   // logout function
