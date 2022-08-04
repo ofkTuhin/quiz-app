@@ -1,6 +1,6 @@
 import { useAuth } from "context/AuthContext";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "./Button";
 import CheckBox from "./CheckBox";
 import Form from "./Form";
@@ -17,7 +17,7 @@ const SignupForm = () => {
 
   // contex call
 
-  const { signUp, currentUser } = useAuth();
+  const { signUp } = useAuth();
   //  history
   const history = useNavigate();
   const handeleSubmit = async (e) => {
@@ -76,13 +76,13 @@ const SignupForm = () => {
         onChange={(e) => setAgree(e.target.value)}
         required
       />
-      <Button type="submit">
+      <Button type="submit" disable={loading}>
         {" "}
         <span>Submit now</span>
       </Button>
       {error && <p className="error">{error}</p>}
       <div className="info">
-        Already have an account? <a href="login.html">Login</a> instead.
+        Already have an account? <Link>Login</Link> instead.
       </div>
     </Form>
   );

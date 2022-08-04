@@ -29,7 +29,7 @@ const Account = () => {
         </>
       ) : (
         <Link to="/login">
-          <a>Login</a>
+          <span>Login</span>
         </Link>
       )}
     </div>

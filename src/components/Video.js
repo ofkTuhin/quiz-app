@@ -6,16 +6,14 @@ import { Link } from "react-router-dom";
 const Video = () => {
   return (
     <Link to="/quiz">
-      <a>
-        <div className={styles.video}>
-          <img src={thumbnail} alt="video" />
-          <p>#23 React Hooks Bangla - React useReducer hook Bangla</p>
-          <div className={styles.meta}>
-            <p>10 Questions</p>
-            <p>Score : Not taken yet</p>
-          </div>
+      <div className={styles.video}>
+        <img src={thumbnail} alt="video" />
+        <p>#23 React Hooks Bangla - React useReducer hook Bangla</p>
+        <div className={styles.meta}>
+          <p>10 Questions</p>
+          <p>Score : Not taken yet</p>
         </div>
-      </a>
+      </div>
     </Link>
   );
 };

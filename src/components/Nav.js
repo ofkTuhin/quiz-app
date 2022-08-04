@@ -12,10 +12,10 @@ const Nav = () => {
           <ul>
             <li>
               <Link to="/">
-                <a className={styles.brand}>
+                <div className={styles.brand}>
                   <img src={logo} alt="learn with sumit" />
                   <h3>Learn with sumit</h3>
-                </a>
+                </div>
               </Link>
             </li>
           </ul>
