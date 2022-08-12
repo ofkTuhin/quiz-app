@@ -2,39 +2,20 @@ import React from "react";
 import CheckBox from "./CheckBox";
 import styles from "styles/answers.module.css";
 
-const Answers = () => {
+const Answers = ({ handleChecked, options }) => {
   return (
     <div className={styles.answers}>
-      <div className={styles.block}>
-        <CheckBox text="A New Hope 1" className={styles.answer} />
-      </div>
-      <div className={styles.block}>
-        <CheckBox text="A New Hope 1" className={styles.answer} />
-      </div>
-      <div className={styles.block}>
-        <CheckBox
-          text="A New Hope 1"
-          className={`${styles.answer} ${styles.currect}`}
-        />
-      </div>
-      <div className={styles.block}>
-        <CheckBox text="A New Hope 1" className={styles.answer} />
-      </div>
-      <div className={styles.block}>
-        <CheckBox text="A New Hope 1" className={styles.answer} />
-      </div>
-      <div className={styles.block}>
-        <CheckBox text="A New Hope 1" className={styles.answer} />
-      </div>
-      <div className={styles.block}>
-        <CheckBox text="A New Hope 1" className={styles.answer} />
-      </div>
-      <div className={styles.block}>
-        <CheckBox
-          text="A New Hope 1"
-          className={`${styles.answer} ${styles.wrong}`}
-        />
-      </div>
+      {options.map((option, i) => (
+        <div className={styles.block} key={i}>
+          <CheckBox
+            text={option.title}
+            className={styles.answer}
+            value={i}
+            checked={option.checked}
+            onChange={(e) => handleChecked(e, i)}
+          />
+        </div>
+      ))}
     </div>
   );
 };

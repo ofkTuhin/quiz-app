@@ -29,7 +29,7 @@ export default function useVideoList(page) {
         setError(false);
         setLoading(true);
         const snapshot = await get(videoQuery);
-        console.log(snapshot.val());
+        
         setLoading(false);
         if (snapshot.exists()) {
           setVideos((prevValue) => {

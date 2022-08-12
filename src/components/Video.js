@@ -7,7 +7,7 @@ const Video = ({ noq, yId, title }) => {
   return (
     <>
       {noq > 0 ? (
-        <Link to="/quiz">
+        <Link to={`/quiz/${yId}`}>
           <div className={styles.video}>
             <img
               src={`http://img.youtube.com/vi/${yId}/maxresdefault.jpg`}

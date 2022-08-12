@@ -28,7 +28,7 @@ const LoginForm = () => {
       setError("");
 
       await login(email, password);
-      history("/quiz");
+      history("/");
     } catch (errors) {
       setLoading(false);
       setError("faild to sign in");
